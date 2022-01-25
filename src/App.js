@@ -1,8 +1,11 @@
+import { useSelector } from 'react-redux';
+
 function App() {
+  const { counter } = useSelector((state) => state);
   return (
     <div className='container'>
       <h1>Hello Redux Basic</h1>
-      <div className='counter'>Counter: 0</div>
+      <div className='counter'>Counter: {counter}</div>
       <div>
         <button className='btn'>Increase + </button>
         <button className='btn'>Decrease - </button>
