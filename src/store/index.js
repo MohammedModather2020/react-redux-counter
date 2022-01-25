@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
 // ------------------------------------------------------------------------>
 // crete global state
-const initState = { counter: 0 };
+const initState = { counter: 0, isShowCounter: true };
 // ------------------------------------------------------------------------>
 // create counter reducer
 const counterReducer = (state = initState, action) => {
@@ -10,6 +10,8 @@ const counterReducer = (state = initState, action) => {
       return { ...state, counter: state.counter + action.payload };
     case 'DECREASE':
       return { ...state, counter: state.counter - action.payload };
+    case 'TOGGLE_COUNTER':
+      return { ...state, isShowCounter: !state.isShowCounter };
     default:
       return state;
   }
