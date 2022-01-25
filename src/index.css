@@ -1,13 +1,34 @@
+/* 
+*  Template Name    : React Redux Counter
+*  version          : 1.0.0
+*  Start Date       : 25-1-2022 - 4:00 AM
+*  Last Update      : 
+*  End Date         : 
+*  GiHub URL        : https://github.com/MohammedModather2020/react-redux-counter
+*  Template URL     : https://mohammedmodather2020.github.io/react-redux-counter
+*  Contact Us       : mohammed-modather144@gmail.com
+*/
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container{
+  text-align: center;
+}
+.container .counter{
+  font-weight: bolder;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.container .btn{
+  padding: .8rem 1rem;
+  border: unset;
+  background-color: #e6e6e6;
+  margin: .5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: .4rem;
+  -webkit-border-radius: .4rem;
+  -moz-border-radius: .4rem;
+  -ms-border-radius: .4rem;
+  -o-border-radius: .4rem;
 }

@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <h1>Hello Redux Basic</h1>
+      <div className='counter'>Counter: 0</div>
+      <div>
+        <button className='btn'>Increase + </button>
+        <button className='btn'>Decrease - </button>
+        <div>
+          <button className='btn'>Hide/Show Counter Number</button>
+        </div>
+      </div>
     </div>
   );
 }
