@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 function App() {
   const dispatch = useDispatch();
-  const { counter } = useSelector((state) => state);
+  const { counter, isShowCounter } = useSelector((state) => state);
   // ------------------------------------------------------------------------>
   // create function increase counter
   const increase = () => {
@@ -15,19 +15,30 @@ function App() {
     const action = { type: 'DECREASE', payload: 1 };
     dispatch(action);
   };
+  // ------------------------------------------------------------------------>
+  // create unction toggle counter
+  const toggleCounter = () => {
+    dispatch({ type: 'TOGGLE_COUNTER' });
+  };
   return (
     <div className='container'>
       <h1>Hello Redux Basic</h1>
-      <div className='counter'>Counter: {counter}</div>
       <div>
-        <button className='btn' onClick={increase}>
-          Increase +
-        </button>
-        <button className='btn' onClick={decrease}>
-          Decrease -
-        </button>
+        {isShowCounter && (
+          <>
+            <div className='counter'>Counter: {counter}</div>
+            <button className='btn' onClick={increase}>
+              Increase + {isShowCounter}
+            </button>
+            <button className='btn' onClick={decrease}>
+              Decrease -
+            </button>
+          </>
+        )}
         <div>
-          <button className='btn'>Hide/Show Counter Number</button>
+          <button className='btn' onClick={toggleCounter}>
+            Hide/Show Counter Number
+          </button>
         </div>
       </div>
     </div>
