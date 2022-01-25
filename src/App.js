@@ -4,16 +4,9 @@ function App() {
   const dispatch = useDispatch();
   const { counter, isShowCounter } = useSelector((state) => state);
   // ------------------------------------------------------------------------>
-  // create function increase counter
-  const increase = () => {
-    const action = { type: 'INCREASE', payload: 1 };
-    dispatch(action);
-  };
-  // ------------------------------------------------------------------------>
-  // create function decrease counter
-  const decrease = () => {
-    const action = { type: 'DECREASE', payload: 1 };
-    dispatch(action);
+  // create function increase and decrease counter
+  const counterOperation = (action, payload) => {
+    dispatch({ type: action, payload });
   };
   // ------------------------------------------------------------------------>
   // create unction toggle counter
@@ -27,10 +20,16 @@ function App() {
         {isShowCounter && (
           <>
             <div className='counter'>Counter: {counter}</div>
-            <button className='btn' onClick={increase}>
+            <button
+              className='btn'
+              onClick={() => counterOperation('INCREASE', 1)}
+            >
               Increase + {isShowCounter}
             </button>
-            <button className='btn' onClick={decrease}>
+            <button
+              className='btn'
+              onClick={() => counterOperation('DECREASE', 1)}
+            >
               Decrease -
             </button>
           </>
